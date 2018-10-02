@@ -1,0 +1,8 @@
+# Exclude the dockerfile itself.
+Docker/*
+
+# Exclude the data files.
+Data/*
+
+# Exclude the gitignore and dockerignore files
+.*ignore
