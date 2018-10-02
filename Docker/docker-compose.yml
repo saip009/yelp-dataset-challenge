@@ -1,0 +1,14 @@
+version: '3'
+services:
+  spark:
+    container_name: yelp-spark
+    image: yelp
+    build:
+      context: ../
+      dockerfile: ./Docker/Spark.dockerfile
+    ports:
+      - "8888:6006"
+      - "4040:4040"
+    volumes:
+      - ../Data:/yelp/data/raw
+      - ../Notebooks:/yelp/notebooks
